@@ -1,8 +1,8 @@
-import React, { FC, memo, useState } from 'react';
+import { ChangeEvent, FC, memo, useState } from 'react';
 
 const TextInput: FC = memo(() => {
   const [text, setText] = useState('');
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
   };
   return (

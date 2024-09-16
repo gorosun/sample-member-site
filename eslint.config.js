@@ -3,6 +3,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tseslintParser from '@typescript-eslint/parser';
 import prettierPlugin from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
+import storybookPlugin from 'eslint-plugin-storybook';
 import globals from 'globals';
 
 export default [
@@ -37,6 +38,7 @@ export default [
       '@typescript-eslint/ban-ts-comment': 'warn', // 必要なTypeScript ESLintルールを追加
       'react/react-in-jsx-scope': 'off',
       'prettier/prettier': 'error',
+      ...storybookPlugin.configs.recommended.rules, // Storybookのルールを追加
     },
   },
 ];

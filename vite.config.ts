@@ -4,7 +4,13 @@ import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [
+    tsconfigPaths({
+      // Reactプラグインの前に配置
+      projects: ['./tsconfig.app.json'],
+    }),
+    react(),
+  ],
   build: {
     sourcemap: false, // ソースマップの生成を無効化
   },

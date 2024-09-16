@@ -12,40 +12,60 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "format": "prettier . --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "2.0.2",
+    "@eslint/config-array": "^0.18.0",
     "@eslint/js": "^9.10.0",
+    "@eslint/object-schema": "^2.1.4",
     "@jridgewell/sourcemap-codec": "^1.5.0",
+    "@storybook/addon-essentials": "^8.3.0",
+    "@storybook/addon-interactions": "^8.3.0",
+    "@storybook/addon-links": "^8.3.0",
+    "@storybook/addon-onboarding": "^8.3.0",
+    "@storybook/blocks": "^8.3.0",
+    "@storybook/builder-vite": "^8.3.0",
+    "@storybook/react": "^8.3.0",
+    "@storybook/react-vite": "^8.3.0",
+    "@storybook/test": "^8.3.0",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.5.0",
     "@typescript-eslint/parser": "^8.5.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "@vitest/coverage-v8": "^2.0.5",
+    "@vitest/coverage-v8": "^2.1.1",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.35.2",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "eslint-plugin-storybook": "^0.8.0",
+    "flat-cache": "^5.0.0",
+    "glob": "11.0.0",
     "globals": "^15.9.0",
-    "happy-dom": "^15.7.3",
-    "husky": "^8.0.0",
+    "happy-dom": "^15.7.4",
+    "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.3",
+    "rimraf": "6.0.1",
+    "storybook": "^8.3.0",
+    "typescript": "4.9.5",
     "typescript-eslint": "^8.5.0",
-    "vite": "^5.4.3",
+    "vite": "^5.4.5",
     "vite-tsconfig-paths": "^5.0.1",
-    "vitest": "^2.0.5"
+    "vitest": "^2.1.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -55,5 +75,12 @@
     "**/*.test.{js,ts,jsx,tsx}": [
       "npm run test"
     ]
+  },
+  "main": "index.js",
+  "repository": "git@github.com:gorosun/sample-member-site.git",
+  "author": "gorosun <goro-hayakawa@no-studio.net>",
+  "license": "MIT",
+  "resolutions": {
+    "glob": "^11.0.0"
   }
 }
